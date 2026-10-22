@@ -2,23 +2,23 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.8.0",
+  "version": "4.8.1",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-22T21:57:00.225298+00:00",
-  "notes": "v4.8.0：公开分发改为单个窗口版 exe（更新器已内嵌），技术报告默认加密，检测与规则模块加固；检测口径、规则与报告 schema 未变。",
+  "published_at": "2026-10-22T23:41:36.311363+00:00",
+  "notes": "v4.8.1：详细结果改为证据优先（文件名/发布者签名/时间，每行可打开文件夹）；GUI 默认不落盘，仅手动导出报告；复制只在点击时生效；修正标题版本与作者昵称。判定口径、规则与报告 schema 未变。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.8.0/PaopaoUpdate-4.8.0.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.8.1/PaopaoUpdate-4.8.1.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.8.0/PaopaoUpdate-4.8.0.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.8.1/PaopaoUpdate-4.8.1.zip"
     ],
-    "size": 27036206,
-    "sha256": "f055477f5c7134b59abb18d85a1387647fa9ccfcffd978c48bbe3992732cb3bf"
+    "size": 27023403,
+    "sha256": "b349e7238d6b9e9863b703ffa951190aeaaf7399b7fe296dc90bb23e52786f63"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27168768,
-      "sha256": "649d204af7b5a40a84e4e6cb49fb58163ffe9d503b03670bc9e9304470682b2a"
+      "size": 27154432,
+      "sha256": "ea647f9c36cfa8dd644e95b17491bf1cf010e372db7e93bdc0f7149eb3265585"
     }
   },
-  "signature": "2NCroyNBSzc1iPebrv1+v6hfUxymN5oNe1T0F2jXbmVTVyJ4AuBb6hZCpK6ZG2Ns54l/xXMWHsx9YMg1wl4QDw=="
+  "signature": "jkqQaFDSwD55rF7X1rDi/X2WfV+xAvPpD26nM3Uaz2IhinUne5BOKxG48CtC0sZTCHBrC5TORdHQA6+XAi/fAw=="
 }
