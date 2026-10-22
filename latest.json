@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "app": "PaopaoReview3",
+  "channel": "stable",
+  "version": "4.6.0",
+  "min_supported": "4.5.0",
+  "published_at": "2026-10-22T19:10:07.907340+00:00",
+  "notes": "v4.6.0：主窗口改为单答案；完整技术报告改为四页签；新增独立更新器与严格启动更新门禁。判定、采集、规则与报告 schema 未变。旧 v4.5.0 客户端需手动安装一次。",
+  "package": {
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.6.0/PaopaoUpdate-4.6.0.zip",
+    "mirrors": [
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.6.0/PaopaoUpdate-4.6.0.zip"
+    ],
+    "size": 23409158,
+    "sha256": "79336d679683e4678af4103ae0939ed3aa64961a564f337893a29a7bfbc33fd9"
+  },
+  "files": {
+    "PaopaoReview3.exe": {
+      "size": 11952909,
+      "sha256": "566e46e681dbf6814b3da4ac7e2b2cf9f63805dda0cff2a1bf7a62b384d781a6"
+    },
+    "PaopaoReview3-console.exe": {
+      "size": 11958541,
+      "sha256": "d8488bee036eff7b56f14730ed2b0827b6d8b8a9cee2ca01121747191949b6af"
+    }
+  },
+  "signature": "MfiQTCpK4AmzYplcUIfc8RHZiKgQ2bkOEJNSo9FZ2ZXNhizzeZFEIky6QlpXd7z6l14bUf3c3PmFmNbo4t7WBA=="
+}
