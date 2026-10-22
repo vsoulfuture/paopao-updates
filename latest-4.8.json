@@ -4,21 +4,21 @@
   "channel": "stable",
   "version": "4.8.0",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-22T20:53:21.888904+00:00",
+  "published_at": "2026-10-22T21:11:23.244966+00:00",
   "notes": "v4.8.0：公开分发改为单个窗口版 exe（更新器已内嵌），技术报告默认加密，检测与规则模块加固；检测口径、规则与报告 schema 未变。",
   "package": {
     "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.8.0/PaopaoUpdate-4.8.0.zip",
     "mirrors": [
       "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.8.0/PaopaoUpdate-4.8.0.zip"
     ],
-    "size": 27036579,
-    "sha256": "e3b31784c7326a746125bd32e0a44d6ffae58e17f47fdd6c2c6655a5996f5457"
+    "size": 27036654,
+    "sha256": "052a87ba1302a5f76145e3d5ebae0c09eb72a86fe203f663adaa3fd897b6df9f"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27164672,
-      "sha256": "5f082ea094cfd662b305697fef17b5038a5dcd3ceb3a0311c9437914483779c1"
+      "size": 27165184,
+      "sha256": "d0da8f6d02f7e0f2276dac5db1f8215e7da4f5e5946aa3554c8b2de077e7e65a"
     }
   },
-  "signature": "wBSpyLD5PTZCEz1lniy1OZwu4JAd8yjWe3LH/xRZsR6ElWtSUQhBIb/LJ34GKvy/T8Bzgp2v7vh2EZDyTah/DA=="
+  "signature": "yV2BrKtOrxYPC10RhHwB7qd4RwFpOYiyZuD8L0nAABQCVx/P5LBKpKbXil63DfFd4Ulw/5bAt6uB+aMxq3dxCg=="
 }
