@@ -4,21 +4,21 @@
   "channel": "stable",
   "version": "4.8.1",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-22T23:41:36.311363+00:00",
+  "published_at": "2026-10-22T23:59:01.976900+00:00",
   "notes": "v4.8.1：详细结果改为证据优先（文件名/发布者签名/时间，每行可打开文件夹）；GUI 默认不落盘，仅手动导出报告；复制只在点击时生效；修正标题版本与作者昵称。判定口径、规则与报告 schema 未变。",
   "package": {
     "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.8.1/PaopaoUpdate-4.8.1.zip",
     "mirrors": [
       "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.8.1/PaopaoUpdate-4.8.1.zip"
     ],
-    "size": 27023403,
-    "sha256": "b349e7238d6b9e9863b703ffa951190aeaaf7399b7fe296dc90bb23e52786f63"
+    "size": 27022107,
+    "sha256": "a4b7f8b2eff405dee88e633cce012c19ef6a8405460de3ab7274c379528ae62e"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27154432,
-      "sha256": "ea647f9c36cfa8dd644e95b17491bf1cf010e372db7e93bdc0f7149eb3265585"
+      "size": 27153920,
+      "sha256": "a8958ea5429dc4257ff6a8b668d8ec6bbe310ec7cea016557eff25f325434809"
     }
   },
-  "signature": "jkqQaFDSwD55rF7X1rDi/X2WfV+xAvPpD26nM3Uaz2IhinUne5BOKxG48CtC0sZTCHBrC5TORdHQA6+XAi/fAw=="
+  "signature": "FjElQf20Ax5tEBEExa3l828UrMIaoMzGG55vKYl1vbSmfmWTNNPm1daN3vYYVNf60obg3LB7DSveuuz+Nx7GBA=="
 }
