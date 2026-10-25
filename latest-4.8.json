@@ -2,32 +2,32 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.10.0",
+  "version": "4.10.1",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-25T20:43:40.075008+00:00",
-  "manifest_epoch": 1792961019,
+  "published_at": "2026-10-25T22:20:40.277250+00:00",
+  "manifest_epoch": 1792966839,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "v4.10.0（2026-10-26）：完成页改为可截图/保存的检测凭证（大字号检测时间、检测编号与主机）；详细结果只保留结论 / 文件 / 使用记录三页签，导出改为单个加密压缩包；文件按“外挂文件 / 同名待确认 / 游戏目录额外”分类。更新系统新增永久清单入口、密钥轮换、最低版本拦截与撤回；新增签名规则包（只允许新增 IOC 与撤回，不含代码）。判定语义与报告 schema 不变。",
+  "notes": "v4.10.1（2026-10-26）：修复 4.10.0 的凭证图片屏幕抓取风险（改为 GDI 直接绘制，不截屏）；主窗口事实改为“内容已核对 N 个 · 同名待确认 M 个”；更新器安装后把新字节同步到正在使用的旧名（先备份再启动），修复“升级成功但重开旧名仍是旧版”。其余与 4.10.0 相同。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.10.0/PaopaoUpdate-4.10.0.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.10.1/PaopaoUpdate-4.10.1.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.10.0/PaopaoUpdate-4.10.0.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.10.1/PaopaoUpdate-4.10.1.zip"
     ],
-    "size": 27811135,
-    "sha256": "2025bd1d04d616a87d9bafd8174e1934d02b9b526b6d7099a1a9598551b4928a"
+    "size": 27821245,
+    "sha256": "bfc03baeeadbe4121d7bcd48d7c82f1a1405dc023a3e71b3389c8d91147294c2"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27938816,
-      "sha256": "26d3c69b70d9992a38a59be6e57e95e34b2e08a41fad8e8b9a7a5209499e0b6a"
+      "size": 27950592,
+      "sha256": "742717499b92d6177c593e0f4ec0bd235dfa4ef07750ab13980fe97c205a8a4c"
     }
   },
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "HpmSpDWMQmnrlev1EnkNWF3bCWLSOtkncyWXPh0z4tj9DNjAzFY984kgOXTP1OyQhvhkRYA16y15NHhg5sRxDA=="
+      "signature": "AiBvDcJNBj6MNNIsG/2wE3w96XSceYVj1D28ddg6knUnCOZM7bIyQTBbv0Ms/NGGKsgykmIt659Y+gWmbSHzDA=="
     }
   ],
-  "signature": "/TSZIudE5MorBwpI8rNDtxR2qzfMw6HJZckNgDGVJRVVkQatw7tXlzCAl3e8ZQ50FvXUOkQB7iBiDKqse4dWBg=="
+  "signature": "bpIGrPBeFVN5eLudkfDEUMgf2nvjDDKb7IyNJDO2upzntLVRUJCoHw3lsyxq9cNQuDncNLxhQPex9BA0qqlpAg=="
 }
