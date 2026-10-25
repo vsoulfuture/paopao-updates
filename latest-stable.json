@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "app": "PaopaoReview3",
+  "channel": "stable",
+  "version": "4.10.0",
+  "min_supported": "4.5.0",
+  "published_at": "2026-10-25T20:43:40.075008+00:00",
+  "manifest_epoch": 1792961019,
+  "key_id": "k1",
+  "withdrawn_versions": [],
+  "notes": "v4.10.0（2026-10-26）：完成页改为可截图/保存的检测凭证（大字号检测时间、检测编号与主机）；详细结果只保留结论 / 文件 / 使用记录三页签，导出改为单个加密压缩包；文件按“外挂文件 / 同名待确认 / 游戏目录额外”分类。更新系统新增永久清单入口、密钥轮换、最低版本拦截与撤回；新增签名规则包（只允许新增 IOC 与撤回，不含代码）。判定语义与报告 schema 不变。",
+  "package": {
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.10.0/PaopaoUpdate-4.10.0.zip",
+    "mirrors": [
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.10.0/PaopaoUpdate-4.10.0.zip"
+    ],
+    "size": 27811135,
+    "sha256": "2025bd1d04d616a87d9bafd8174e1934d02b9b526b6d7099a1a9598551b4928a"
+  },
+  "files": {
+    "泡泡堂反外挂检测器.exe": {
+      "size": 27938816,
+      "sha256": "26d3c69b70d9992a38a59be6e57e95e34b2e08a41fad8e8b9a7a5209499e0b6a"
+    }
+  },
+  "signatures": [
+    {
+      "key_id": "k1",
+      "signature": "HpmSpDWMQmnrlev1EnkNWF3bCWLSOtkncyWXPh0z4tj9DNjAzFY984kgOXTP1OyQhvhkRYA16y15NHhg5sRxDA=="
+    }
+  ],
+  "signature": "/TSZIudE5MorBwpI8rNDtxR2qzfMw6HJZckNgDGVJRVVkQatw7tXlzCAl3e8ZQ50FvXUOkQB7iBiDKqse4dWBg=="
+}
