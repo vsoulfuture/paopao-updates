@@ -2,23 +2,23 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.8.2",
+  "version": "4.9.0",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-23T18:06:14.288545+00:00",
-  "notes": "4.8.2：新增规则治理层（注册表/良性回归/静态检查/哈希白名单/影子模式/变体特征与聚类/候选转正门禁/覆盖缺口清单）。判定语义与采集器未变，出厂转正台账为空 —— 现场判定行为与 4.8.1 一致。",
+  "published_at": "2026-10-25T17:32:43.797383+00:00",
+  "notes": "v4.9.0（2026-10-26）：新增游戏目录自动定位与官方基线核对（清单外/缺失/哈希不符，均只作线索）、NTFS USN 日志只读核对（装了又删的文件名线索）、Amcache 离线只读解析（不挂载 Hive）；并入 4.8.3 的自检误报与深度扫描预算修复。判定语义与报告 schema 不变。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.8.2/PaopaoUpdate-4.8.2.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.9.0/PaopaoUpdate-4.9.0.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.8.2/PaopaoUpdate-4.8.2.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.9.0/PaopaoUpdate-4.9.0.zip"
     ],
-    "size": 27303502,
-    "sha256": "55744624b67e4000e04f647dce64181001256c9d0c1dacf712ed63a45377ae0d"
+    "size": 27583828,
+    "sha256": "e1491b0c0a33dd24f5258eb07fce5441f08ec4995bae131fd187c57760bb9791"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27433984,
-      "sha256": "5c69a7f112e3bde27dbbbfcd9171c06bbaf2922536b2e33756bc5b5096e06562"
+      "size": 27712512,
+      "sha256": "e875360a40712f6758cbf6fbfdc3d625de669d86a5065b1ccb6a3d6c67b1b972"
     }
   },
-  "signature": "h0RrEin5Fg6rZ7kZeeNP7hagrCffYJutr8SlbuBhCo7b+m3mVIRRpcMa4O1bDciOI6div/nHrMExdtAg04MpBA=="
+  "signature": "cliVs3dUb2gvPbUKhXi61fsWZBVvIXcjSrTT+rPNJ0CC1DuPWzNdZeQM7rFNuGpKIvVaPVPO46oyYAQwSbcLCQ=="
 }
