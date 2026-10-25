@@ -2,23 +2,32 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.9.0",
+  "version": "4.10.0",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-25T17:32:43.797383+00:00",
-  "notes": "v4.9.0（2026-10-26）：新增游戏目录自动定位与官方基线核对（清单外/缺失/哈希不符，均只作线索）、NTFS USN 日志只读核对（装了又删的文件名线索）、Amcache 离线只读解析（不挂载 Hive）；并入 4.8.3 的自检误报与深度扫描预算修复。判定语义与报告 schema 不变。",
+  "published_at": "2026-10-25T20:43:40.075008+00:00",
+  "manifest_epoch": 1792961019,
+  "key_id": "k1",
+  "withdrawn_versions": [],
+  "notes": "v4.10.0（2026-10-26）：完成页改为可截图/保存的检测凭证（大字号检测时间、检测编号与主机）；详细结果只保留结论 / 文件 / 使用记录三页签，导出改为单个加密压缩包；文件按“外挂文件 / 同名待确认 / 游戏目录额外”分类。更新系统新增永久清单入口、密钥轮换、最低版本拦截与撤回；新增签名规则包（只允许新增 IOC 与撤回，不含代码）。判定语义与报告 schema 不变。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.9.0/PaopaoUpdate-4.9.0.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.10.0/PaopaoUpdate-4.10.0.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.9.0/PaopaoUpdate-4.9.0.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.10.0/PaopaoUpdate-4.10.0.zip"
     ],
-    "size": 27583828,
-    "sha256": "e1491b0c0a33dd24f5258eb07fce5441f08ec4995bae131fd187c57760bb9791"
+    "size": 27811135,
+    "sha256": "2025bd1d04d616a87d9bafd8174e1934d02b9b526b6d7099a1a9598551b4928a"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27712512,
-      "sha256": "e875360a40712f6758cbf6fbfdc3d625de669d86a5065b1ccb6a3d6c67b1b972"
+      "size": 27938816,
+      "sha256": "26d3c69b70d9992a38a59be6e57e95e34b2e08a41fad8e8b9a7a5209499e0b6a"
     }
   },
-  "signature": "cliVs3dUb2gvPbUKhXi61fsWZBVvIXcjSrTT+rPNJ0CC1DuPWzNdZeQM7rFNuGpKIvVaPVPO46oyYAQwSbcLCQ=="
+  "signatures": [
+    {
+      "key_id": "k1",
+      "signature": "HpmSpDWMQmnrlev1EnkNWF3bCWLSOtkncyWXPh0z4tj9DNjAzFY984kgOXTP1OyQhvhkRYA16y15NHhg5sRxDA=="
+    }
+  ],
+  "signature": "/TSZIudE5MorBwpI8rNDtxR2qzfMw6HJZckNgDGVJRVVkQatw7tXlzCAl3e8ZQ50FvXUOkQB7iBiDKqse4dWBg=="
 }
