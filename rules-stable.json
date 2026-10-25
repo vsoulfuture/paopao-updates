@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "app": "PaopaoReview3",
+  "rules_version": "2026.10.26-1",
+  "issued_at": "2026-10-25T20:29:06.445911+00:00",
+  "applies_to": {
+    "min": "4.10.0",
+    "max": ""
+  },
+  "known_files": {},
+  "known_names": [],
+  "name_patterns": [],
+  "withdraw": [],
+  "notes": "规则通道开通（暂无新增 IOC）",
+  "expires_at": "2027-01-31T00:00:00+08:00",
+  "key_id": "k1",
+  "signatures": [
+    {
+      "key_id": "k1",
+      "signature": "sOcEwokBdqi4aaWk9LSTM0jNj6GCdae4D1uP9lJzZ7y5g5CApkjsHx1U+1qf5HtQIS+og+flzbp4H9B87mbrBA=="
+    }
+  ],
+  "signature": "jWQLbmW5g4brXcaZl5WrZemC52Df4F52+MHeI/k1uE41u5cjjMBXt9OGMGRXv4eR8D3EiHHlYtlAj+lfU0IfAg=="
+}
