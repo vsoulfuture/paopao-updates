@@ -2,32 +2,48 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.10.1",
+  "version": "4.11.0",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-25T22:20:40.277250+00:00",
-  "manifest_epoch": 1792966839,
+  "published_at": "2026-10-26T18:50:47.515748+00:00",
+  "manifest_epoch": 1793040647,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "v4.10.1（2026-10-26）：修复 4.10.0 的凭证图片屏幕抓取风险（改为 GDI 直接绘制，不截屏）；主窗口事实改为“内容已核对 N 个 · 同名待确认 M 个”；更新器安装后把新字节同步到正在使用的旧名（先备份再启动），修复“升级成功但重开旧名仍是旧版”。其余与 4.10.0 相同。",
+  "notes": "v4.11.0：证据强度分级与待核对线索、历史/当前身份分离、扫描与更新统一互斥、规则包签发治理与 ReDoS 防护、本地路径边界、玩家预检与详细结果三页签、导出摘要口径修复。报告 schema 5，--verify 兼容 3/4/5。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.10.1/PaopaoUpdate-4.10.1.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.0/PaopaoUpdate-4.11.0.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.10.1/PaopaoUpdate-4.10.1.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.0/PaopaoUpdate-4.11.0.zip"
     ],
-    "size": 27821245,
-    "sha256": "bfc03baeeadbe4121d7bcd48d7c82f1a1405dc023a3e71b3389c8d91147294c2"
+    "size": 28145152,
+    "sha256": "ec1d5ef6b411078077318703ce87daf50a1e995762cbe0af2abe90ce6b32b41a"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 27950592,
-      "sha256": "742717499b92d6177c593e0f4ec0bd235dfa4ef07750ab13980fe97c205a8a4c"
+      "size": 28278272,
+      "sha256": "59ab4036c82cb9dfe0613edaf1bca19920d0eb1bfc5e853dce47be68d0c240ca"
     }
+  },
+  "resource_integrity": {
+    "VERSION.json": {
+      "size": 247,
+      "sha256": "d5662fb05afe05131957e880f0c897675a1734061c0959af211a40715487f8ec"
+    }
+  },
+  "rules": {
+    "size": 662,
+    "sha256": "34ec7af9ff5935cf160e85035e275266eae2644c944bbc1b52d1f490272acfe5",
+    "epoch": 0,
+    "applies_to": {
+      "min": "4.10.0",
+      "max": ""
+    },
+    "rules_version": "2026.10.26-1"
   },
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "AiBvDcJNBj6MNNIsG/2wE3w96XSceYVj1D28ddg6knUnCOZM7bIyQTBbv0Ms/NGGKsgykmIt659Y+gWmbSHzDA=="
+      "signature": "GeedioiS9eTNxi8JlMm4AtZNYCDUMMebLqTUUnrNe2oKgAcqWMYeEUZitmAQFme66txhKmAJzbGuIm8fziVMDw=="
     }
   ],
-  "signature": "bpIGrPBeFVN5eLudkfDEUMgf2nvjDDKb7IyNJDO2upzntLVRUJCoHw3lsyxq9cNQuDncNLxhQPex9BA0qqlpAg=="
+  "signature": "MSTxx4kpcMMEoN/SHONbtbbsIpyp8sQvjTkPuiLn27so/f6TGxvYB+CvKJxmavk6UjIvyoAG2FdWEtr42ErpCw=="
 }
