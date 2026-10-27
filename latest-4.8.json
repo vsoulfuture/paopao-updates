@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.11.0",
+  "version": "4.11.1",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-26T18:50:47.515748+00:00",
-  "manifest_epoch": 1793040647,
+  "published_at": "2026-10-27T10:49:06.128396+00:00",
+  "manifest_epoch": 1793098146,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "v4.11.0：证据强度分级与待核对线索、历史/当前身份分离、扫描与更新统一互斥、规则包签发治理与 ReDoS 防护、本地路径边界、玩家预检与详细结果三页签、导出摘要口径修复。报告 schema 5，--verify 兼容 3/4/5。",
+  "notes": "# v4.11.1\n\n本次只修更新门禁的可用性与可诊断性，**检测逻辑、规则与报告 schema 5 不变**。\n\n## 修复\n\n- 更新失败不再只显示“没有可用的更新清单”：现在会写明哪个主机、什么错误（DNS/超时/证书/HTTP 状态），并写入本地日志\n  `%LOCALAPPDATA%\\PaopaoCheck\\logs\\update-check-*.log`。\n- 更新器先直连配置的 Gitee/GitHub；全部失败后自动按**系统代理**重试同一批源。仍然只允许配置的 HTTPS 主机并校验证书。\n- 已经是最新版本的用户，如果本地策略在最近 14 天内成功校验过，断网/连不上更新源时允许**离线宽限**继续检测，\n  准备页会明确写“本次未验证最新版本”。超过窗口仍需联网确认；被撤回或低于支持线的版本不放行。\n\n## 已知情况\n\n- 已经在 4.11.0 且更新门禁失败的用户**无法自动升级**（发现不了 4.11.1），需要手动下载本版本并替换 exe；\n  替换后新版本会再试直连/系统代理，失败时会显示真实原因。\n- 普通用户（能连上更新源）会在下次启动时自动升级到 4.11.1。\n\n## 验证\n\n- 全量单元测试通过；新增更新失败诊断、系统代理回退、离线宽限的回归测试。\n- 更新器 `--check --current 4.11.1` 返回 `update_available=false`，不会循环更新。\n- 检测语义未变；报告 schema 仍为 5，`--verify` 兼容 3/4/5。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.0/PaopaoUpdate-4.11.0.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.1/PaopaoUpdate-4.11.1.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.0/PaopaoUpdate-4.11.0.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.1/PaopaoUpdate-4.11.1.zip"
     ],
-    "size": 28145152,
-    "sha256": "ec1d5ef6b411078077318703ce87daf50a1e995762cbe0af2abe90ce6b32b41a"
+    "size": 28164594,
+    "sha256": "03e0ec7a05aec5ca3f6258b2e450f76b8f393c502b6eaff814f7fdf81c697408"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 28278272,
-      "sha256": "59ab4036c82cb9dfe0613edaf1bca19920d0eb1bfc5e853dce47be68d0c240ca"
+      "size": 28293632,
+      "sha256": "1c19061c6c3840ac3a214425110502f7d38cf6863142afe4f17dc88047f745be"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "d5662fb05afe05131957e880f0c897675a1734061c0959af211a40715487f8ec"
+      "sha256": "abffa10aa0aceceb281222305d232f480d06ab4decab0d94448d09ae43663c78"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "GeedioiS9eTNxi8JlMm4AtZNYCDUMMebLqTUUnrNe2oKgAcqWMYeEUZitmAQFme66txhKmAJzbGuIm8fziVMDw=="
+      "signature": "MoK5flI4HeEC0CqD5JOYt+XYUgcbhjNyqN2qlPnXRO4N6e2/Q+ra1blDlMO8Szm9X1c4P/Q5MGNcW3CUdLLCBg=="
     }
   ],
-  "signature": "MSTxx4kpcMMEoN/SHONbtbbsIpyp8sQvjTkPuiLn27so/f6TGxvYB+CvKJxmavk6UjIvyoAG2FdWEtr42ErpCw=="
+  "signature": "Gcawoae1BEB4HmoEaEeO7l1x5LOBy/YYq9vO0ynz4H8FhTMk1z7F9+x4mgkhozg8KDgBlum5tXR6yt5arcz3AA=="
 }
