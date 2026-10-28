@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.11.4",
+  "version": "4.11.5",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-28T00:08:43.072770+00:00",
-  "manifest_epoch": 1793146122,
+  "published_at": "2026-10-28T00:43:17.343588+00:00",
+  "manifest_epoch": 1793148196,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "# v4.11.4\n\n本次重点修复更新链，确保后续检测能力可以持续交付。\n\n## 更新与安装\n\n- 修复新版本启动后未正确完成健康确认、更新提交和重开的问题。\n- 恢复 Gitee 清单及规则包下载，保留 GitHub 备源。\n- 更新仍按“签名清单 → 包校验 → 备份替换 → 新版本自检 → 提交确认”执行；失败时回滚，不开始检测。\n- 改进待核对文件展示、压缩包内线索检查与扫描稳定性。\n\n## 4.11.0 及无法更新的用户必须手动安装\n\n不要继续使用旧版本的自动更新。\n\n1. 关闭旧检测器。\n2. 下载本 release 的 `PaopaoReview3-v4.11.4-gui.zip`；Gitee 不可用时使用 GitHub 同名资产。\n3. 先备份旧程序，再解压，用其中的 `泡泡堂反外挂检测器.exe` 替换旧文件。不要直接在压缩包里运行。\n4. 窗口版 exe 的 SHA-256：`c30e5637dedafb98eec8887ea08f71dfd07e4c66a1de67ba3f66dab31454d888`。\n5. 重新运行并确认 UAC。更新检查通过后，点击“开始检测”。\n\n不要下载源码包，不要把控制台版当作玩家安装包。自动更新包 `PaopaoUpdate-4.11.4.zip` 仅用于客户端自动更新；手动安装请用 GUI 完整包。\n\n## 验证与边界\n\n- 已验证本地签名包的完整更新提交、错误回执关窗及旧版哈希恢复。\n- 已验证 Gitee/GitHub 双源清单、规则包和防降级检查。\n- 检测结论是技术事实分级，不构成处罚决定；待核对线索不等于外挂。\n- 未发现不等于绝对清白；未知外挂、内核驱动、DMA 与隐藏模块不能被承诺完全覆盖。",
+  "notes": "# v4.11.5\n\n这是 4.11.4 的更新权限热修复版。\n\n## 修复\n\n- 更新安装后恢复文件继承权限，并仅赋予内置 Users 读取执行权限。\n- 修复临时文件 ACL 可能导致普通用户无法读取更新后 exe、无法核对 SHA-256 的问题。\n- 不授予 Users 写入或修改权限；校验失败仍回滚。\n- 包含 4.11.4 的更新会话、Gitee 下载、待核对线索与界面修复。\n\n## 安装与升级\n\n- 4.11.4 用户可在线升级到 4.11.5。\n- **4.11.0 及无法检查更新的用户仍须手动下载 `PaopaoReview3-v4.11.5-gui.zip`，备份后替换旧 exe，不要依赖旧版自动更新。**\n- 手动安装使用 GUI 完整包，不使用自动更新包，不需要源码包。\n- 关闭旧程序后再替换；重新运行并确认 UAC，更新检查通过后点击“开始检测”。\n\n## 验证与边界\n\n- 已验证普通 Users 可恢复读取执行、安装目标权限处理及失败回滚。\n- 已验证更新会话、健康提交和本地完整更新事务。\n- 发布后仍须进行线上升级与安装后普通权限读取复核。\n- 检测结论不构成处罚决定；待核对线索不等于外挂，未发现不等于绝对清白。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.4/PaopaoUpdate-4.11.4.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.5/PaopaoUpdate-4.11.5.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.4/PaopaoUpdate-4.11.4.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.5/PaopaoUpdate-4.11.5.zip"
     ],
-    "size": 28199026,
-    "sha256": "17433d8933cf925b46e39014d2c01d146e7eb4e3f1f3b6726e4234edfc3dcf5b"
+    "size": 28197936,
+    "sha256": "c1e38f3a18099e2f75fb5147a549477d96165699a14f5d1c1b375b1959cd17af"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 28328448,
-      "sha256": "c30e5637dedafb98eec8887ea08f71dfd07e4c66a1de67ba3f66dab31454d888"
+      "size": 28327936,
+      "sha256": "2c18eede15e33b4c84ddc22489197b2aa1c08d26fa9b4aaa4c7ee65688ab3d60"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "b5df307b080f8c080b95c68726bf769cfc099e727b642ab39154fcdac76fc78c"
+      "sha256": "e4ff8dca9fda381185279a6deeef336483f72d2177dfb656a9dd157a9c898d6f"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "XpH6nUXPI6kfuvHf6fkYVML8mThlfGqh03jJq2rHgUn9F3fb245C8yM2Xxw7XPLJVe1Iv5wD3iU8RRe+4RpMDw=="
+      "signature": "+HdvdZrcg5GszU/Zr4HI1Iv4n9zhbW//6V1BQZUodpzivxzI7TYlFrbVFW8GQkSQbZ32Imn80kUXsloXB3EYAQ=="
     }
   ],
-  "signature": "Awb7zdHgY9YqRxB9PBdztT+wIJ1TwMryeerScKqFODZFkytdO2jWIREbFvOwueQSw3rsigLbH1cGyC8utNEzDA=="
+  "signature": "UM+HFpw6tIKSa5CIdR/3iqpakXnVLDasOmUjkcSAH328oDZDEWU/wKeWIoRcKuuAIs9PpDmmZjixSa3iU6eFDg=="
 }
