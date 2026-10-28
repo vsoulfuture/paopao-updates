@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.11.5",
+  "version": "4.11.6",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-28T00:43:17.343588+00:00",
-  "manifest_epoch": 1793148196,
+  "published_at": "2026-10-28T04:43:50.486846+00:00",
+  "manifest_epoch": 1793162629,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "# v4.11.5\n\n这是 4.11.4 的更新权限热修复版。\n\n## 修复\n\n- 更新安装后恢复文件继承权限，并仅赋予内置 Users 读取执行权限。\n- 修复临时文件 ACL 可能导致普通用户无法读取更新后 exe、无法核对 SHA-256 的问题。\n- 不授予 Users 写入或修改权限；校验失败仍回滚。\n- 包含 4.11.4 的更新会话、Gitee 下载、待核对线索与界面修复。\n\n## 安装与升级\n\n- 4.11.4 用户可在线升级到 4.11.5。\n- **4.11.0 及无法检查更新的用户仍须手动下载 `PaopaoReview3-v4.11.5-gui.zip`，备份后替换旧 exe，不要依赖旧版自动更新。**\n- 手动安装使用 GUI 完整包，不使用自动更新包，不需要源码包。\n- 关闭旧程序后再替换；重新运行并确认 UAC，更新检查通过后点击“开始检测”。\n\n## 验证与边界\n\n- 已验证普通 Users 可恢复读取执行、安装目标权限处理及失败回滚。\n- 已验证更新会话、健康提交和本地完整更新事务。\n- 发布后仍须进行线上升级与安装后普通权限读取复核。\n- 检测结论不构成处罚决定；待核对线索不等于外挂，未发现不等于绝对清白。",
+  "notes": "# v4.11.6\n\n本次更新改进了文件检查覆盖与结果准确性。\n\n## 改进\n\n- 已解压的泡泡堂辅助程序可以直接识别，不依赖压缩包路径。\n- 改进目录检查安排，减少大目录导致其他位置未检查的情况。\n- 补充常见压缩包内文件检查；无法读取或超出检查预算时会明确显示覆盖不足。\n- 修复一类键盘厂商程序被误列为待核对的问题，不添加厂商白名单。\n- 保留更新事务、健康确认、安装权限处理和回滚能力。\n\n## 安装与升级\n\n- 可从支持在线更新的旧版本升级到 4.11.6。\n- **4.11.0 及无法检查更新的用户，请手动下载 `PaopaoReview3-v4.11.6-gui.zip`，备份后替换旧程序，不要依赖旧版自动更新。**\n- 手动安装使用 GUI 完整包，不需要源码包。关闭旧程序后替换，重新运行并完成更新检查，再点击“开始检测”。\n\n## 验证与边界\n\n- 已通过指定文件的实际成品扫描、报告校验、全量测试、良性软件回归和界面检查。\n- 发布后仍将复核线上更新事务和普通用户读取执行权限。\n- 快速检查仍受覆盖预算限制；无法检查的部分会标注，不会写成“未发现问题”。\n- 待核对线索不等于外挂，技术结果不构成处罚决定；未发现不等于绝对清白。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.5/PaopaoUpdate-4.11.5.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.6/PaopaoUpdate-4.11.6.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.5/PaopaoUpdate-4.11.5.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.6/PaopaoUpdate-4.11.6.zip"
     ],
-    "size": 28197936,
-    "sha256": "c1e38f3a18099e2f75fb5147a549477d96165699a14f5d1c1b375b1959cd17af"
+    "size": 29215700,
+    "sha256": "1a1c33cf81102c8123d84b05544bbc4e36ca5860674490c6e1fa40e7e2428697"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 28327936,
-      "sha256": "2c18eede15e33b4c84ddc22489197b2aa1c08d26fa9b4aaa4c7ee65688ab3d60"
+      "size": 29342208,
+      "sha256": "2a00ffe9038186bd3a968e0f9c88f71b0ead7a661b6c6d58678a3d842ee5b7e4"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "e4ff8dca9fda381185279a6deeef336483f72d2177dfb656a9dd157a9c898d6f"
+      "sha256": "ec352b0883799a4d379e4f44d7be6c382dfd772d8102b717c6aeb21a874a61a0"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "+HdvdZrcg5GszU/Zr4HI1Iv4n9zhbW//6V1BQZUodpzivxzI7TYlFrbVFW8GQkSQbZ32Imn80kUXsloXB3EYAQ=="
+      "signature": "eeOoGK/iGMF/H4XddfcXf175vlOKaA2LCqOjzypYKM/n04Ch9BTjRpjXQlL4PbCzhY+54oGnnPbgOCTk8oEMBw=="
     }
   ],
-  "signature": "UM+HFpw6tIKSa5CIdR/3iqpakXnVLDasOmUjkcSAH328oDZDEWU/wKeWIoRcKuuAIs9PpDmmZjixSa3iU6eFDg=="
+  "signature": "V/HlxoXi/A9shZdWKSsFWTIJG4fe+nP3hHDrta8qbholczMsDSmbqEh+4CTlWDEUqcGGmJHSBPa79Vx9rLaoCQ=="
 }
