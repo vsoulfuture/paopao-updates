@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.11.6",
+  "version": "4.13.0",
   "min_supported": "4.5.0",
-  "published_at": "2026-10-28T04:43:50.486846+00:00",
-  "manifest_epoch": 1793162629,
+  "published_at": "2026-11-01T15:24:21.189908+00:00",
+  "manifest_epoch": 1793546660,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "# v4.11.6\n\n本次更新改进了文件检查覆盖与结果准确性。\n\n## 改进\n\n- 已解压的泡泡堂辅助程序可以直接识别，不依赖压缩包路径。\n- 改进目录检查安排，减少大目录导致其他位置未检查的情况。\n- 补充常见压缩包内文件检查；无法读取或超出检查预算时会明确显示覆盖不足。\n- 修复一类键盘厂商程序被误列为待核对的问题，不添加厂商白名单。\n- 保留更新事务、健康确认、安装权限处理和回滚能力。\n\n## 安装与升级\n\n- 可从支持在线更新的旧版本升级到 4.11.6。\n- **4.11.0 及无法检查更新的用户，请手动下载 `PaopaoReview3-v4.11.6-gui.zip`，备份后替换旧程序，不要依赖旧版自动更新。**\n- 手动安装使用 GUI 完整包，不需要源码包。关闭旧程序后替换，重新运行并完成更新检查，再点击“开始检测”。\n\n## 验证与边界\n\n- 已通过指定文件的实际成品扫描、报告校验、全量测试、良性软件回归和界面检查。\n- 发布后仍将复核线上更新事务和普通用户读取执行权限。\n- 快速检查仍受覆盖预算限制；无法检查的部分会标注，不会写成“未发现问题”。\n- 待核对线索不等于外挂，技术结果不构成处罚决定；未发现不等于绝对清白。",
+  "notes": "# PaopaoReview v4.13.0 发布说明\n\n## 主要变化\n\n- 证据时间线：报告新增 `match_window` / `window_stats` / `cooccurrence`；\n  控制台 `--window 开始,结束` 只做标注与对照，**不改变判定**。\n- 新增取证源（只读）：Defender 检测历史、WER 崩溃、ShimCache、已加载驱动、\n  游戏进程模块允许清单、服务安装事件（7045）。\n- 通用 PE 注入能力候选（`shadow.pe.inject_capability`，影子观察，不进判定）。\n- 误报修复：游戏自带 `DWK.dll`/`Sw.dll` 不再作为线索；移除短串 `bnb` 的误命中。\n- UI/文案：分档标题短化、术语统一为“使用记录/待核对”、主卡事实去重、\n  覆盖不足给下一步、详细结果补数据去向说明。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29815296 | `96d54f184799ae14293ae14f7515273046cf05b1e11a9fbc21ba3d4c14ea6ef2` |\n| `PaopaoReview3-console.exe` | 15530496 | `c6422cf9649e5fa5b5ccaca3e81c599a2460e84b1c775b12b29fad0fdcb1a1c4` |\n| `PaopaoReview3-v4.13.0-gui.zip` | 29685939 | `900db78ae938bdb1f0868c0115145dc2c1ea5d7005a584948c95872acfacc2d9` |\n| `PaopaoUpdate-4.13.0.zip` | 29686240 | `597fbbf3675e489e03346ee81f0d9b86760f226440d2e77955a3b7c99dee2fb4` |",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.11.6/PaopaoUpdate-4.11.6.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.13.0/PaopaoUpdate-4.13.0.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.11.6/PaopaoUpdate-4.11.6.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.13.0/PaopaoUpdate-4.13.0.zip"
     ],
-    "size": 29215700,
-    "sha256": "1a1c33cf81102c8123d84b05544bbc4e36ca5860674490c6e1fa40e7e2428697"
+    "size": 29679993,
+    "sha256": "ddec7a24adeed77cee0b2e093f92a81d9ffee5826d6dd5c12b3c31057d562aa2"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 29342208,
-      "sha256": "2a00ffe9038186bd3a968e0f9c88f71b0ead7a661b6c6d58678a3d842ee5b7e4"
+      "size": 29809152,
+      "sha256": "58749abd13e0a2d10071d91a68482769dd687be1e4eb4566bf2b4cb93b7548e8"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "ec352b0883799a4d379e4f44d7be6c382dfd772d8102b717c6aeb21a874a61a0"
+      "sha256": "508163607f7ccc24876415854af1bbaf5f50c0f52c9f69dc86f8ef0e39f34949"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "eeOoGK/iGMF/H4XddfcXf175vlOKaA2LCqOjzypYKM/n04Ch9BTjRpjXQlL4PbCzhY+54oGnnPbgOCTk8oEMBw=="
+      "signature": "1upn7mYY9pm97OcKObZrwNbXtDI4e+wht5imylmixldH07e5lzbtYdS6A9Sqy/W2HYb6U3No1HaL9U3JpYR8Bg=="
     }
   ],
-  "signature": "V/HlxoXi/A9shZdWKSsFWTIJG4fe+nP3hHDrta8qbholczMsDSmbqEh+4CTlWDEUqcGGmJHSBPa79Vx9rLaoCQ=="
+  "signature": "rLNtg4CCOwxVECxoGhWDwlYWT/LW3qN8VpHXpMkwACBzMEdG/D2XCa3G+GI25H15I6doyBfEgCDifmAmjIogCw=="
 }
