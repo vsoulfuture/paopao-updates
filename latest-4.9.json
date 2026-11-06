@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.13.0",
+  "version": "4.14.0",
   "min_supported": "4.5.0",
-  "published_at": "2026-11-01T15:24:21.189908+00:00",
-  "manifest_epoch": 1793546660,
+  "published_at": "2026-11-06T10:30:42.517858+00:00",
+  "manifest_epoch": 1793961041,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "# PaopaoReview v4.13.0 发布说明\n\n## 主要变化\n\n- 证据时间线：报告新增 `match_window` / `window_stats` / `cooccurrence`；\n  控制台 `--window 开始,结束` 只做标注与对照，**不改变判定**。\n- 新增取证源（只读）：Defender 检测历史、WER 崩溃、ShimCache、已加载驱动、\n  游戏进程模块允许清单、服务安装事件（7045）。\n- 通用 PE 注入能力候选（`shadow.pe.inject_capability`，影子观察，不进判定）。\n- 误报修复：游戏自带 `DWK.dll`/`Sw.dll` 不再作为线索；移除短串 `bnb` 的误命中。\n- UI/文案：分档标题短化、术语统一为“使用记录/待核对”、主卡事实去重、\n  覆盖不足给下一步、详细结果补数据去向说明。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29815296 | `96d54f184799ae14293ae14f7515273046cf05b1e11a9fbc21ba3d4c14ea6ef2` |\n| `PaopaoReview3-console.exe` | 15530496 | `c6422cf9649e5fa5b5ccaca3e81c599a2460e84b1c775b12b29fad0fdcb1a1c4` |\n| `PaopaoReview3-v4.13.0-gui.zip` | 29685939 | `900db78ae938bdb1f0868c0115145dc2c1ea5d7005a584948c95872acfacc2d9` |\n| `PaopaoUpdate-4.13.0.zip` | 29686240 | `597fbbf3675e489e03346ee81f0d9b86760f226440d2e77955a3b7c99dee2fb4` |",
+  "notes": "# PaopaoReview v4.14.0 发布说明（本地候选）\n\n## 主要变化\n\n- **泛化检测**：新增生效规则 `pe.inject_capability`（REVIEW 级待核对线索）——\n  注入 API >=3 + 泡泡堂目标串 + 输入合成（SendInput/KeybdEvent/MouseEvent）或\n  覆盖绘制/防采集任一。不依赖已知样本哈希与文件名，抓\"没见过的作者/版本\"。\n  目标串门控为良性回归实测裁定（放宽后在远控/CEF/Electron 上留 5 条 REVIEW 误报）；\n  「泡泡堂以外的外挂」登记为覆盖缺口（`coverage_gaps_v3.py` / `CANDIDATE_RULES_V3.md` §15）。\n- **性能**：live 段模块快照并行化（`CreateToolhelp32Snapshot` 单次 ~310ms 固定内核延迟，\n  串行 754 次约 33s → 8 线程并行），固定夹具全链 42.5s → 14.8s（-65.2%），峰值内存不升。\n- **缺陷修复**：trace 流从不关闭（每轮套件 ResourceWarning → 0）；候选规则 CLI 一条\n  用例 stderr 噪声（90 份日志 → 0）；4 处测试句柄泄漏。\n- **判定不变**：已知样本与家族标记判定语义不变；新规则只产 REVIEW 级待核对线索。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29877248 | `6cd786b721f99778a352d5ddd67344379ed9cbf67a0e9f7ad3d7fc01ee9c86ea` |\n| `PaopaoReview3-console.exe` | 15593984 | `e1e9b4dff40ce866ccb0393473da995eccfa66a6aa256b9ab4238a084c56ffc6` |\n| `PaopaoReview3-v4.14.0-gui.zip` | 29747698 | `61a5963e219ca2e1616b4d2db55ceaaa7905f4650e70abf2fc04e2a232f24046` |\n\n## 发版前仍缺\n\n1. 更新签名清单（`latest-stable.json` / `latest-4.9.json` / `latest-4.8.json`）；\n2. 更新 `SHA256SUMS_V3.json` 的 `detector_version` 与源码清单；\n3. README/SOP 标题与 §8 的 bytes/sha256；\n4. 双源上传与匿名下载/升级复验。\n\n详见 `BLOCKED.md`。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.13.0/PaopaoUpdate-4.13.0.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.14.0/PaopaoUpdate-4.14.0.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.13.0/PaopaoUpdate-4.13.0.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.14.0/PaopaoUpdate-4.14.0.zip"
     ],
-    "size": 29679993,
-    "sha256": "ddec7a24adeed77cee0b2e093f92a81d9ffee5826d6dd5c12b3c31057d562aa2"
+    "size": 29748001,
+    "sha256": "099ee485e2a4eb65a26654429e1b12899f92ba41edbbbd639420705f87781d27"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 29809152,
-      "sha256": "58749abd13e0a2d10071d91a68482769dd687be1e4eb4566bf2b4cb93b7548e8"
+      "size": 29877248,
+      "sha256": "6cd786b721f99778a352d5ddd67344379ed9cbf67a0e9f7ad3d7fc01ee9c86ea"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "508163607f7ccc24876415854af1bbaf5f50c0f52c9f69dc86f8ef0e39f34949"
+      "sha256": "5f1556a2b42a0f45290645106cf36f2b294b356f720ff973c585a07875e459f7"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "1upn7mYY9pm97OcKObZrwNbXtDI4e+wht5imylmixldH07e5lzbtYdS6A9Sqy/W2HYb6U3No1HaL9U3JpYR8Bg=="
+      "signature": "ST6s8byJyW+91O/tY2GYvOCz8LnXJD7kRRd6sbEqu3mUMSQqEhztR9rowPDuMSGwF80zJ3xaXYtzIeT21QlsCw=="
     }
   ],
-  "signature": "rLNtg4CCOwxVECxoGhWDwlYWT/LW3qN8VpHXpMkwACBzMEdG/D2XCa3G+GI25H15I6doyBfEgCDifmAmjIogCw=="
+  "signature": "/CZXBMeRqpjjfto5shYuepRO3fIMvsSZx28FoB1wVqtIU0jL9tCBhbORPoq/3DKhJddahSSscrXV5ygy70wuBg=="
 }
