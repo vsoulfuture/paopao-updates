@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.14.0",
+  "version": "4.14.1",
   "min_supported": "4.5.0",
-  "published_at": "2026-11-06T10:30:42.517858+00:00",
-  "manifest_epoch": 1793961041,
+  "published_at": "2026-11-07T10:18:49.081856+00:00",
+  "manifest_epoch": 1794046728,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "# PaopaoReview v4.14.0 发布说明（本地候选）\n\n## 主要变化\n\n- **泛化检测**：新增生效规则 `pe.inject_capability`（REVIEW 级待核对线索）——\n  注入 API >=3 + 泡泡堂目标串 + 输入合成（SendInput/KeybdEvent/MouseEvent）或\n  覆盖绘制/防采集任一。不依赖已知样本哈希与文件名，抓\"没见过的作者/版本\"。\n  目标串门控为良性回归实测裁定（放宽后在远控/CEF/Electron 上留 5 条 REVIEW 误报）；\n  「泡泡堂以外的外挂」登记为覆盖缺口（`coverage_gaps_v3.py` / `CANDIDATE_RULES_V3.md` §15）。\n- **性能**：live 段模块快照并行化（`CreateToolhelp32Snapshot` 单次 ~310ms 固定内核延迟，\n  串行 754 次约 33s → 8 线程并行），固定夹具全链 42.5s → 14.8s（-65.2%），峰值内存不升。\n- **缺陷修复**：trace 流从不关闭（每轮套件 ResourceWarning → 0）；候选规则 CLI 一条\n  用例 stderr 噪声（90 份日志 → 0）；4 处测试句柄泄漏。\n- **判定不变**：已知样本与家族标记判定语义不变；新规则只产 REVIEW 级待核对线索。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29877248 | `6cd786b721f99778a352d5ddd67344379ed9cbf67a0e9f7ad3d7fc01ee9c86ea` |\n| `PaopaoReview3-console.exe` | 15593984 | `e1e9b4dff40ce866ccb0393473da995eccfa66a6aa256b9ab4238a084c56ffc6` |\n| `PaopaoReview3-v4.14.0-gui.zip` | 29747698 | `61a5963e219ca2e1616b4d2db55ceaaa7905f4650e70abf2fc04e2a232f24046` |\n\n## 发版前仍缺\n\n1. 更新签名清单（`latest-stable.json` / `latest-4.9.json` / `latest-4.8.json`）；\n2. 更新 `SHA256SUMS_V3.json` 的 `detector_version` 与源码清单；\n3. README/SOP 标题与 §8 的 bytes/sha256；\n4. 双源上传与匿名下载/升级复验。\n\n详见 `BLOCKED.md`。",
+  "notes": "# PaopaoReview v4.14.1 发布说明（本地候选）\n\n## 主要变化（三项真机反馈修复）\n\n- **游戏基线刷新**：游戏自动更新新增的官方组件 `GPK\\GPKUP.dll`（616,520 B /\n  `4329c854…`，盛趣信息技术（上海）有限公司签名有效）纳入游戏目录完整性基线，\n  不再报「游戏目录清单外文件」；CA.exe 版本指纹未变（游戏本体未换版）。\n  `_gen_game_baseline.py` 新增 `--source` 记录基线由来。\n- **scope 定位修复**：游戏目录的备份/副本（目录名含 `.bak` / `-bak` / `_bak` /\n  `.backup` / `.old` / `-old` / `.copy` / `-copy` / `备份` / `副本`）不再被当成\n  现役安装做完整性核对，跳过写进 scope notes 不静默；备份中的文件仍走常规扫描，\n  真外挂残留仍按文件规则命中（哈希命中不受影响）。\n- **UI 修复**：顶栏主按钮悬停不再被 100ms 轮询重置底色而闪烁 —— `controls()`\n  增加状态签名幂等门（`control_state` 六输入不变整个跳过）；hero 的\n  「保存结果图片 / 进一步检查」同路径覆盖。渲染自检新增场景二十二连续采样守卫。\n- **判定不变**：规则库与判定语义零变化；以上均为数据刷新、定位修正与界面修复。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29877248 | `2c7e810506be8f1c8ba396d6838d11b176e6d44c8524bb6d0148e9440fedf3b0` |\n| `PaopaoReview3-console.exe` | 15593984 | `8bf3347296aff0da75fc56925dccc435f794d33b0e5329795924b12cbfcf4fa3` |\n| `PaopaoReview3-v4.14.1-gui.zip` | 29746963 | `f1e4eb993c7a14c48091acf6d6f401ee1348737bcce686fa21611b388fdf19b1` |\n\n## 发版前仍缺\n\n1. 更新签名清单（`latest-stable.json` / `latest-4.9.json` / `latest-4.8.json`）；\n2. 更新 `SHA256SUMS_V3.json` 的 `detector_version` 与源码清单；\n3. README/SOP 标题与 §8 的 bytes/sha256；\n4. 双源上传与匿名下载/升级复验。\n\n详见 `BLOCKED.md`。",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.14.0/PaopaoUpdate-4.14.0.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.14.1/PaopaoUpdate-4.14.1.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.14.0/PaopaoUpdate-4.14.0.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.14.1/PaopaoUpdate-4.14.1.zip"
     ],
-    "size": 29748001,
-    "sha256": "099ee485e2a4eb65a26654429e1b12899f92ba41edbbbd639420705f87781d27"
+    "size": 29747264,
+    "sha256": "baef88c945f87e51bbf62a5cc0c789b261cf240c45c941702efa0568e86d2732"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
       "size": 29877248,
-      "sha256": "6cd786b721f99778a352d5ddd67344379ed9cbf67a0e9f7ad3d7fc01ee9c86ea"
+      "sha256": "2c7e810506be8f1c8ba396d6838d11b176e6d44c8524bb6d0148e9440fedf3b0"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "5f1556a2b42a0f45290645106cf36f2b294b356f720ff973c585a07875e459f7"
+      "sha256": "3b577adac367436747dc1a0de855160d0e511c3ca88dbf003ac2ffc384a58661"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "ST6s8byJyW+91O/tY2GYvOCz8LnXJD7kRRd6sbEqu3mUMSQqEhztR9rowPDuMSGwF80zJ3xaXYtzIeT21QlsCw=="
+      "signature": "Zrxe+ttttSdJcxNYYWFVfy1akwafyUeGyJmY5ZHAyGVC/9f4RE75VijAiZoiAtEn8xi6Fh7lIHiZmNujrTZWAw=="
     }
   ],
-  "signature": "/CZXBMeRqpjjfto5shYuepRO3fIMvsSZx28FoB1wVqtIU0jL9tCBhbORPoq/3DKhJddahSSscrXV5ygy70wuBg=="
+  "signature": "gF5zSdO3qKMGXgnLxMvxI3MKwWy7OD9TpuWE0CzXvizuQ0cERGQnY7e2RB7XtqR5yqnSOAW0Uw5/txWkDM0xCg=="
 }
