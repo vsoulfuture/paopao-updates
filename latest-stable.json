@@ -2,31 +2,31 @@
   "schema": 1,
   "app": "PaopaoReview3",
   "channel": "stable",
-  "version": "4.14.1",
+  "version": "4.14.2",
   "min_supported": "4.5.0",
-  "published_at": "2026-11-07T10:18:49.081856+00:00",
-  "manifest_epoch": 1794046728,
+  "published_at": "2026-11-08T10:06:18.563112+00:00",
+  "manifest_epoch": 1794132377,
   "key_id": "k1",
   "withdrawn_versions": [],
-  "notes": "# PaopaoReview v4.14.1 发布说明（本地候选）\n\n## 主要变化（三项真机反馈修复）\n\n- **游戏基线刷新**：游戏自动更新新增的官方组件 `GPK\\GPKUP.dll`（616,520 B /\n  `4329c854…`，盛趣信息技术（上海）有限公司签名有效）纳入游戏目录完整性基线，\n  不再报「游戏目录清单外文件」；CA.exe 版本指纹未变（游戏本体未换版）。\n  `_gen_game_baseline.py` 新增 `--source` 记录基线由来。\n- **scope 定位修复**：游戏目录的备份/副本（目录名含 `.bak` / `-bak` / `_bak` /\n  `.backup` / `.old` / `-old` / `.copy` / `-copy` / `备份` / `副本`）不再被当成\n  现役安装做完整性核对，跳过写进 scope notes 不静默；备份中的文件仍走常规扫描，\n  真外挂残留仍按文件规则命中（哈希命中不受影响）。\n- **UI 修复**：顶栏主按钮悬停不再被 100ms 轮询重置底色而闪烁 —— `controls()`\n  增加状态签名幂等门（`control_state` 六输入不变整个跳过）；hero 的\n  「保存结果图片 / 进一步检查」同路径覆盖。渲染自检新增场景二十二连续采样守卫。\n- **判定不变**：规则库与判定语义零变化；以上均为数据刷新、定位修正与界面修复。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29877248 | `2c7e810506be8f1c8ba396d6838d11b176e6d44c8524bb6d0148e9440fedf3b0` |\n| `PaopaoReview3-console.exe` | 15593984 | `8bf3347296aff0da75fc56925dccc435f794d33b0e5329795924b12cbfcf4fa3` |\n| `PaopaoReview3-v4.14.1-gui.zip` | 29746963 | `f1e4eb993c7a14c48091acf6d6f401ee1348737bcce686fa21611b388fdf19b1` |\n\n## 发版前仍缺\n\n1. 更新签名清单（`latest-stable.json` / `latest-4.9.json` / `latest-4.8.json`）；\n2. 更新 `SHA256SUMS_V3.json` 的 `detector_version` 与源码清单；\n3. README/SOP 标题与 §8 的 bytes/sha256；\n4. 双源上传与匿名下载/升级复验。\n\n详见 `BLOCKED.md`。",
+  "notes": "# PaopaoReview v4.14.2 发布说明\n\n## 主要变化（界面状态与主题）\n\n- **悬停状态恢复**：修复 v4.14.1 顶栏「开始检测」按钮悬停变暗后移开不回初始蓝、\n  再次悬停只在暗色间切换的回归。4.14.0 的 100ms 轮询兜底被幂等门停掉后，\n  状态机写入的主色与 hover 静止基准两套来源显形；现统一到\n  `ui_kit_v3.apply_button_palette()`，禁用态按钮不再被 `<Leave>` 覆盖禁用灰。\n- **深色 / 浅色主题切换**：`LIGHT_PALETTE` 从回退快照升级为完整第二套主题\n  （补齐 8 个派生别名、`TONE_FG` / `TONE_BG` 映射，并按 WCAG 复核灰字）。\n  主题在启动期应用，页头提供日月图标按钮，偏好只存主题名，**下次启动生效**；\n  默认仍是深色，浅色模式跳过系统深色标题栏。\n- **判定不变**：规则库、采集器、报告结构与结论语义零变化。\n\n## 验证\n\n全量单测 1424 项 OK；渲染自检深色 / 浅色两套全过；`_ui_audit.py` 无新增违规。\n\n## 产物\n\n| 文件 | 字节 | SHA-256 |\n|---|---:|---|\n| `泡泡堂反外挂检测器.exe` | 29901824 | `027bd09d6faf63e240bcc7a451e577724cc330aa2a3ba0b3ed5519307adead45` |\n| `PaopaoReview3-console.exe` | 15616000 | `1df8956bd999316bda4eb509e94a26c7f6ee36ec01fd8edfdd905518f0cdc2ee` |\n| `PaopaoReview3-v4.14.2-gui.zip` | 29768842 | `7828b1d28055e457d0aaab0c1289a091f633c82a8a93f505eda58569f40907f8` |\n\n## 证据\n\n- 发布检查单：`RELEASE_CHECKLIST_4142.md`\n- 上传日志 / 匿名下载复验 / 旧版真实升级回执：`.scratch/release-4142/`",
   "package": {
-    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.14.1/PaopaoUpdate-4.14.1.zip",
+    "url": "https://gitee.com/bnb110/paopao-updates/releases/download/v4.14.2/PaopaoUpdate-4.14.2.zip",
     "mirrors": [
-      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.14.1/PaopaoUpdate-4.14.1.zip"
+      "https://github.com/vsoulfuture/paopao-updates/releases/download/v4.14.2/PaopaoUpdate-4.14.2.zip"
     ],
-    "size": 29747264,
-    "sha256": "baef88c945f87e51bbf62a5cc0c789b261cf240c45c941702efa0568e86d2732"
+    "size": 29769144,
+    "sha256": "d58e031dde8b7d55bff9f83eff7f7c196ee4b2a6f3b1968eafba85183d4b17b8"
   },
   "files": {
     "泡泡堂反外挂检测器.exe": {
-      "size": 29877248,
-      "sha256": "2c7e810506be8f1c8ba396d6838d11b176e6d44c8524bb6d0148e9440fedf3b0"
+      "size": 29901824,
+      "sha256": "027bd09d6faf63e240bcc7a451e577724cc330aa2a3ba0b3ed5519307adead45"
     }
   },
   "resource_integrity": {
     "VERSION.json": {
       "size": 247,
-      "sha256": "3b577adac367436747dc1a0de855160d0e511c3ca88dbf003ac2ffc384a58661"
+      "sha256": "001c0c9e55d95a7b57be438d7d2aa67a1e1aeba0f7faf8ce0b6ff630af168399"
     }
   },
   "rules": {
@@ -42,8 +42,8 @@
   "signatures": [
     {
       "key_id": "k1",
-      "signature": "Zrxe+ttttSdJcxNYYWFVfy1akwafyUeGyJmY5ZHAyGVC/9f4RE75VijAiZoiAtEn8xi6Fh7lIHiZmNujrTZWAw=="
+      "signature": "8KK+cStDV86O5wXglC0lnSTE3Js0zzYcHLAWkkc8mEFAhQUev58mX2ofGT2yTgWtA3jf3qgG70DpEeCVKikADA=="
     }
   ],
-  "signature": "gF5zSdO3qKMGXgnLxMvxI3MKwWy7OD9TpuWE0CzXvizuQ0cERGQnY7e2RB7XtqR5yqnSOAW0Uw5/txWkDM0xCg=="
+  "signature": "gEv3IGuPP8AMWuVHzAMVZk5cdA6YHXVV15yqlCbqSM33wWG7xwECgK1xXxxl+mYSOlD7IhEKoVTh8JtGDUPOBg=="
 }
